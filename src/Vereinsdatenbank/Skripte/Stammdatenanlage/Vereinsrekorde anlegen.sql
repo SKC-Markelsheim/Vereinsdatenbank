@@ -1,0 +1,15 @@
+﻿BEGIN TRAN
+
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('29.04.2018', '[Verein] Vereinsrekord Mannschaft', 3476, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('30.11.2019', '[Verein] Vereinsrekord Einzel', 622, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('17.02.2018', '[Bahnrekord] Bahnrekord Mannschaft', 3432, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('17.02.2018', '[Bahnrekord] Bahnrekord Einzel', 620, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('29.04.2018', '[1. Mannschaft] Mannschaftsrekord Auswärts', 3476, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('17.02.2018', '[1. Mannschaft] Mannschaftsrekord Heim', 3432, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('30.11.2019', '[1. Mannschaft] Mannschaftsrekord Einzel', 622, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('27.10.2018', '[2. Mannschaft] Mannschaftsrekord Auswärts', 3281, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('01.01.2000', '[2. Mannschaft] Mannschaftsrekord Heim', 0, null)
+insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('01.02.2020', '[2. Mannschaft] Mannschaftsrekord Einzel', 601, null)
+--insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('29.04.2018', '[3. Mannschaft] Mannschaftsrekord Auswärts', 3476, null)
+--insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('29.04.2018', '[3. Mannschaft] Mannschaftsrekord Heim', 3476, null)
+--insert into Vereinsrekorde (Datum, Beschreibung, Rekordwert, SpielerID) values ('29.04.2018', '[3. Mannschaft] Mannschaftsrekord Einzel', 3476, null)

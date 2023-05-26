@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Vereinsdatenbank</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{508df3ff-f0f8-461b-a7c8-0de4806841a4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Vereinsdatenbank</RootNamespace>
+    <AssemblyName>Vereinsdatenbank</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SuppressTSqlWarnings>71501, 71502</SuppressTSqlWarnings>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Prozeduren" />
+    <Folder Include="Views" />
+    <Folder Include="SchemaCompare" />
+    <Folder Include="Tables\Training" />
+    <Folder Include="Prozeduren\Info" />
+    <Folder Include="Tables\SozialeMedien" />
+    <Folder Include="Tables\Administration" />
+    <Folder Include="Tables\Sportbetrieb" />
+    <Folder Include="Skripte" />
+    <Folder Include="Skripte\Auswertungen" />
+    <Folder Include="Tables\Stammdaten" />
+    <Folder Include="Tables\Stammdaten\Finanzen" />
+    <Folder Include="Tables\Stammdaten\Mitglieder" />
+    <Folder Include="Skripte\Stammdatenanlage" />
+    <Folder Include="Funktionen" />
+    <Folder Include="Skripte\DBA" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Prozeduren\EinzelnesMitgliedsalterBerechnen.sql" />
+    <Build Include="Prozeduren\AlterNeuBerechnen.sql" />
+    <Build Include="Views\Mitglieder_Gesamt.sql" />
+    <Build Include="Views\Finanzuebersicht.sql" />
+    <Build Include="Tables\Training\Uebungen.sql" />
+    <Build Include="Tables\Training\Trainingseinheiten.sql" />
+    <Build Include="Tables\Training\AbsolvierteUebungen.sql" />
+    <Build Include="Prozeduren\Info\ColumnInfo.sql" />
+    <Build Include="Views\Trainingsuebersicht.sql" />
+    <Build Include="Tables\SozialeMedien\Liveticker.sql" />
+    <Build Include="Tables\Administration\Protokollierungen.sql" />
+    <Build Include="Tables\Administration\Customizing.sql" />
+    <Build Include="Tables\Sportbetrieb\Partien.sql" />
+    <Build Include="Tables\Sportbetrieb\PartieDetails.sql" />
+    <Build Include="Tables\Sportbetrieb\Duelle.sql" />
+    <Build Include="Tables\Sportbetrieb\DuellErgebnisse.sql" />
+    <Build Include="Tables\Sportbetrieb\Saetze.sql" />
+    <Build Include="Tables\SozialeMedien\Postings.sql" />
+    <Build Include="Tables\SozialeMedien\SocialMediaPlattformen.sql" />
+    <Build Include="Tables\Sportbetrieb\SpielerPartieErgebnisZuordnungen.sql" />
+    <Build Include="Tables\Sportbetrieb\LigaMannschaftZuordnungen.sql" />
+    <Build Include="Tables\Sportbetrieb\Vereinsrekorde.sql" />
+    <Build Include="Prozeduren\ErzeugeLivetickerUebersichtAnhandSaison.sql" />
+    <Build Include="Views\Livetickeruebersicht.sql" />
+    <Build Include="Tables\Stammdaten\Finanzen\Beitragssaetze.sql" />
+    <Build Include="Tables\Stammdaten\Finanzen\Konten.sql" />
+    <Build Include="Tables\Stammdaten\Finanzen\Mitgliedsbeitraege.sql" />
+    <Build Include="Tables\Stammdaten\Mitglieder\Vorstandsmitglieder.sql" />
+    <Build Include="Tables\Stammdaten\Mitglieder\Adressen.sql" />
+    <Build Include="Tables\Stammdaten\Mitglieder\Mitglieder.sql" />
+    <Build Include="Tables\Stammdaten\Benutzer.sql" />
+    <Build Include="Tables\Stammdaten\Spieler.sql" />
+    <Build Include="Views\Partienuebersicht.sql" />
+    <Build Include="Tables\Stammdaten\PartieArten.sql" />
+    <None Include="Skripte\Stammdatenanlage\Anlage Partiearten.sql" />
+    <Build Include="Tables\Stammdaten\Finanzen\Banken.sql" />
+    <Build Include="Funktionen\GetNextLiveticker.sql" />
+    <Build Include="Tables\Stammdaten\Vereine.sql" />
+    <Build Include="Tables\Stammdaten\Mannschaften.sql" />
+    <Build Include="Tables\Stammdaten\Saisons.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Vereinsdatenbank.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SchemaCompare\CompareToLocalDB.scmp" />
+    <None Include="SchemaCompare\CompareToSKCProdNew.scmp" />
+    <None Include="Skripte\Gesamte Partie anlegen.sql" />
+    <None Include="Skripte\Ergebniszuordnungen anlegen.sql" />
+    <None Include="Skripte\Auswertungen\Schnittberechnungen.sql" />
+    <None Include="Skripte\Liveticker anlegen.sql" />
+    <None Include="Skripte\Stammdatenanlage\Vereinsanlage.sql" />
+    <None Include="Skripte\Stammdatenanlage\SpieleranlageSeptember2021.sql" />
+    <None Include="Skripte\Stammdatenanlage\Beitraege anlege.sql" />
+    <None Include="Skripte\Stammdatenanlage\Verknüpfung Liga und Mannschaften.sql" />
+    <None Include="Skripte\Stammdatenanlage\Vorstand anlegen.sql" />
+    <None Include="Skripte\Stammdatenanlage\Vereinsrekorde anlegen.sql" />
+    <None Include="Skripte\MannschaftsVereinMigration.sql" />
+    <None Include="Skripte\DBA\Remove every FK Constraint.sql" />
+    <None Include="Skripte\Stammdatenanlage\PartieArten auf Livetickerebene einführen.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="Vereinsdatenbank">
+      <DefaultValue>
+      </DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>
